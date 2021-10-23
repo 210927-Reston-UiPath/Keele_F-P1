@@ -1,0 +1,19 @@
+* {
+    font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
+  }
+  .myclass:hover  {
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+      5px 5px 6px -5px rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 6px -5px rgba(0, 0, 0, 0.02);
+  }
+  .hideme {
+    height: 1px; border: none }
+  
+  .noborder{border: none}
+    
+  .offscreen {
+    height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px; }
+  
+  #total {
+    text-align: right;
+  }

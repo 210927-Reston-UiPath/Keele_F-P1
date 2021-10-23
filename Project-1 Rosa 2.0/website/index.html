@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DummyStore</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>DummyStore</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <table class="table">
+                    <thead>
+                        <th>name</th>
+                        <th class ="offscreen">image</th>
+                        <th>price</th>
+                        <th>description</th>
+                        <th>quantity</th>
+                    </thead>
+                    <tbody >
+                    <tr class="myclass" id="Chicken">
+                        <td>Chicken</td>
+                        <td colspan ='1'><img src="imagerefs/chickenref.jpg" alt="" border='3' height='150' width='150' /></td>
+                        <td class="price">$2.75</td>
+                        <td>Cheapest chicken in the land</td>
+                        <td><input type="number" name="" id="" class="quantity"></td>
+                        <td><Input type="button" value="Buy" class="btn btn-primary" onclick="buy('Chicken')"></td>
+                    </tr>
+                    <tr class="myclass" id="Bacon">
+                        <td>Bacon</td>
+                        <td colspan ='1'><img src="imagerefs/baconref.jpg" alt="" border='3' height='150' width='150' /></td>
+                        <td class="price">$6.50</td>
+                        <td>Mmmmmm...BACON!</td>
+                        <td><input type="number" name="" id="" class="quantity"></td>
+                        <td><Input type="button" value="Buy" class="btn btn-primary" onclick="buy('Bacon')"></td>
+                    </tr>
+                    <tr class="myclass" id="Beef">
+                        <td>Beef</td>
+                        <td colspan ='1'><img src="imagerefs/beefref.jpg" alt="" border='3' height='150' width='150' /></td>
+                        <td class="price">$4.25</td>
+                        <td>The cheap freerange stuff</td>
+                        <td><input type="number" name="" id="" class="quantity"></td>
+                        <td><Input type="button" value="Buy" class="btn btn-primary" onclick="buy('Beef')"></td>
+                    </tr>
+                    <tr class="myclass" id="Apples">
+                        <td>Apples</td>
+                        <td colspan ='1'><img src="imagerefs/appleref.jpg" alt="" border='3' height='150' width='150' /></td>
+                        <td class="price">$1.50</td>
+                        <td>Keep the doctor away..</td>
+                        <td><input type="number" name="" id="" class="quantity"></td>
+                        <td><Input type="button" value="Buy" class="btn btn-primary" onclick="buy('Apples')"></td>
+                    </tr>
+                    <tr class="myclass" id="Oranges">
+                        <td>Oranges</td>
+                        <td colspan ='1'><img src="imagerefs/orangeref.jpg" alt="" border='3' height='150' width='150' /></td>
+                        <td class="price">$2.00</td>
+                        <td>Them zesty fruits..</td>
+                        <td><input type="number" name="" id="" class="quantity"></td>
+                        <td><Input type="button" value="Buy" class="btn btn-primary" onclick="buy('Oranges')"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <h5>Cart</h5>
+                <table class="table" id="cart">
+                    <thead>
+                        <th>item</th>
+                        <th>price</th>
+                        <th>quantity</th>
+                        <th>subtotal</th>
+                    </thead>
+                    <tbody>
+                  
+                        
+                    </tbody>
+                </table>
+                <p id="total"></p>
+                
+                <button class="btn btn-secondary" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
