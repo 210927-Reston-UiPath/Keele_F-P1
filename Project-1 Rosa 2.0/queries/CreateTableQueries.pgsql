@@ -35,11 +35,41 @@ drop table expensesheet
 
 
 select * from clients;
-select * from shoppingList;
-select * from orderInfo;
-select * from expensesheet
+select * from shoppingList where clientid = '1';
+select * from orderInfo where clientid = '1';
+select * from expensesheet where clientid = '1';
+
+select * from shoppingList where clientid = '2';
+select * from orderInfo where clientid = '2';
+select * from expensesheet where clientid = '2';
+
+
 
 select clientFName, clientlname, clientEmail from clients
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 insert into clients(clientfname, clientlname, clientemail, vendor)
 values ('jimmy', 'john', 'testeremailforp1fk@gmail.com','DummyStore');
