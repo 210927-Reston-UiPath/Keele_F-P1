@@ -1,62 +1,554 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="OrderFromDummyStore" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="OrderFromDummyStore_1"
- xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" 
- xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
- xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
- xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" 
- xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" 
- xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" 
- xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" 
- xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <TextExpression.NamespacesForImplementation>
-        <sco:Collection x:TypeArguments="x:String">
-            <x:String>System.Activities</x:String>
-            <x:String>System.Activities.Statements</x:String>
-            <x:String>System.Activities.Expressions</x:String>
-            <x:String>System.Activities.Validation</x:String>
-            <x:String>System.Activities.XamlIntegration</x:String>
-            <x:String>Microsoft.VisualBasic</x:String>
-            <x:String>Microsoft.VisualBasic.Activities</x:String>
-            <x:String>System</x:String>
-            <x:String>System.Collections</x:String>
-            <x:String>System.Collections.Generic</x:String>
-            <x:String>System.Data</x:String>
-            <x:String>System.Diagnostics</x:String>
-            <x:String>System.Drawing</x:String>
-            <x:String>System.IO</x:String>
-            <x:String>System.Linq</x:String>
-            <x:String>System.Net.Mail</x:String>
-            <x:String>System.Xml</x:String>
-            <x:String>System.Xml.Linq</x:String>
-            <x:String>UiPath.Core</x:String>
-            <x:String>UiPath.Core.Activities</x:String>
-            <x:String>System.Windows.Markup</x:String>
-        </sco:Collection>
-    </TextExpression.NamespacesForImplementation>
-    <TextExpression.ReferencesForImplementation>
-        <sco:Collection x:TypeArguments="AssemblyReference">
-            <AssemblyReference>System.Activities</AssemblyReference>
-            <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-            <AssemblyReference>mscorlib</AssemblyReference>
-            <AssemblyReference>System.Data</AssemblyReference>
-            <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-            <AssemblyReference>System</AssemblyReference>
-            <AssemblyReference>System.Drawing</AssemblyReference>
-            <AssemblyReference>System.Core</AssemblyReference>
-            <AssemblyReference>System.Xml</AssemblyReference>
-            <AssemblyReference>System.Xml.Linq</AssemblyReference>
-            <AssemblyReference>PresentationFramework</AssemblyReference>
-            <AssemblyReference>WindowsBase</AssemblyReference>
-            <AssemblyReference>PresentationCore</AssemblyReference>
-            <AssemblyReference>System.Xaml</AssemblyReference>
-            <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-            <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-        </sco:Collection>
-    </TextExpression.ReferencesForImplementation>
-    <Sequence DisplayName="OrderFromDummyStore" sap2010:WorkflowViewState.IdRef="Sequence_1">
-        <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+<Activity mc:Ignorable="sap sap2010" x:Class="OrderFromDummyStore" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ExtractDataTable" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <this:OrderFromDummyStore.ExtractDataTable>
+    <InArgument x:TypeArguments="sd:DataTable" />
+  </this:OrderFromDummyStore.ExtractDataTable>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1298,2722</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>OrderFromDummyStore_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="47">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="518,2617" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="clientID" />
+      <Variable x:TypeArguments="sd:DataTable" Name="clientshoppingIN" />
+      <Variable x:TypeArguments="x:String" Name="total" />
+      <Variable x:TypeArguments="x:String" Name="productinSL" />
+      <Variable x:TypeArguments="x:String" Name="quantityinSL" />
+      <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbconnection" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GetShoppingList workflow" sap:VirtualizedContainerService.HintSize="476,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="GetShoppingList.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="ui:DatabaseConnection" x:Key="p1DBConnection">[dbconnection]</OutArgument>
+        <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="p1DBConnectionin" />
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="clientplusListDS">[clientshoppingIN]</OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="clientplusListPEGA" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="476,1093" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://210927-reston-uipath.github.io/Keele_F-P1/">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="422,992" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[clientshoppingIN]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="380,654" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence sap:VirtualizedContainerService.HintSize="346,535" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence sap:VirtualizedContainerService.HintSize="304,443" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[productinSL]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[row("product").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[quantityinSL]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[row("quantity").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[clientID]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[row("clientID").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[productinSL]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence x:Key="Chicken" sap:VirtualizedContainerService.HintSize="476,794" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: DummyStore" sap:VirtualizedContainerService.HintSize="434,742" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" Version="V1">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,526" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[quantityinSL]">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://210927-reston-uipath.github.io/Keele_F-P1/" DesignTimeRectangle="979, 185, 164, 30" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='number' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKgAAAAiCAYAAADLYJIKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACJSURBVHhe7dIhDoAwAARBXt3vl2BIS/BdMZOcOrvXhDCBkrYFOsYwO77VG+j3gFPWFgVKjkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpv4E+nsPs9FZboFAjUMLmvAEP04m3OZ+q6AAAAABJRU5ErkJggg==" InformativeScreenshot="150dfb0e61bb1299511d48891a3be7d3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='DummyStore' /&gt;" SearchSteps="FuzzySelector, Image">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="320, 176, 93, 168" ElementType="Text" FriendlyName="'Chicken'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' type='' aaname='Chicken' check:text='Chicken' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAACsCAYAAABrcMLJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMdSURBVHhe7dhNTttAHEDxXqULFj1WlAUnYQE3QcpRQNygiy6KBIeYxvaM5yOTuK6gfkTvSZYaf8b/X2ykfgu2eTPC95sfLhstIgAWX0eARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIA+geEl3BX/X/4bXh8jZuOPd+frquLx+8P4S2uudTb4Xa8zt1TXHGFrUN4PYRdM8Bp6HlIIqxvBcJ7eNz3BlwPdRlhXSKUdZ6CVDn4/O/ytVWi9J6EBByXYlsfIZ97Wt8cf/MQnsf9huK+9y8hPD3kfYbPkP4eId3AwpdPCLt9HMQJXouQBpgGFz/H65winDm+gJu+Qzpf2v/4nZpz7g7v4+et+ySEcmjtkJshxvOWA5mGND09NULxq07F46snJcJP54zHlE9H+mEs3Mv/6tOehPz6uYxQDrxXRkjDzMeW27vL+F0b9KEvi7D6b0Lc+EEIaagZZdp+er22a0KYh9necH2TaxF6r5MSZkaYB7Z8fBpy9Qq7DoRjnadhGvqlX+YCwrnPcUDtL3+oXtceH6939vzHvjTCWLypeamfjPUIQ805i+H0EPL+6ZzpGnHpnfu6EOyjEwGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQANCP8/PXbZaPFJwGQCJsXwh/fYrq2fJobfAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Buy'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://210927-reston-uipath.github.io/Keele_F-P1/" DesignTimeRectangle="1208, 185, 51, 38" ElementType="Button" FriendlyName="'Buy'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='button' aaname='Buy' check:text='Buy' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAqCAYAAAAXk8MDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF7SURBVGhD7Zk9jsIwEIW5AA232sustC3H2BtwAc5ASbctotyKkoqOzPISP2dsZUUSYsgYf9KTyORH/uKJiZSFZMz7yP38inx8V7L6usry004wXowb49d4OeywJhUH49eCXg7mXSdYCzyIl7M+aww8iJfrOtBqSJGzFlLkrIUUOWshRc5aSJH7P5XsLu4CMafXvauSyeQ2ur5vaufjawRJGrlb/YDipZJ1UH9OyHPktpWcsa1adX1EQeSwb3+HM91ce8zskyRyeuB17Y5c50y7c3Zbtz0gJNmC4sWQu3JX2ZyabcrU2yPbmiRdULxMD7lwEWpmMrhBA0KSPXOs1zPRR05fy4mG1+wfMiO5tlajjh0akrYt/TMTLxjteUHr8SbE9YEhyRYU0CnsYOvFElxYxrYkQh6Umz6Qe/TNhsxLzrXlmP82HTITuba9p3gfJbNryylCipy1kCJnLeQ95LL+hJX1x8esPxsD7IC5NUmMF+PWYiCQy42M5UT+ABoQSUS1ikFnAAAAAElFTkSuQmCC" InformativeScreenshot="c712eec95c998535225bf04a2c783943.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='DummyStore' /&gt;" SearchSteps="FuzzySelector, Image">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="320, 176, 93, 168" ElementType="Text" FriendlyName="'Chicken'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' type='' aaname='Chicken' check:text='Chicken' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAACsCAYAAABrcMLJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMdSURBVHhe7dhNTttAHEDxXqULFj1WlAUnYQE3QcpRQNygiy6KBIeYxvaM5yOTuK6gfkTvSZYaf8b/X2ykfgu2eTPC95sfLhstIgAWX0eARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIA+geEl3BX/X/4bXh8jZuOPd+frquLx+8P4S2uudTb4Xa8zt1TXHGFrUN4PYRdM8Bp6HlIIqxvBcJ7eNz3BlwPdRlhXSKUdZ6CVDn4/O/ytVWi9J6EBByXYlsfIZ97Wt8cf/MQnsf9huK+9y8hPD3kfYbPkP4eId3AwpdPCLt9HMQJXouQBpgGFz/H65winDm+gJu+Qzpf2v/4nZpz7g7v4+et+ySEcmjtkJshxvOWA5mGND09NULxq07F46snJcJP54zHlE9H+mEs3Mv/6tOehPz6uYxQDrxXRkjDzMeW27vL+F0b9KEvi7D6b0Lc+EEIaagZZdp+er22a0KYh9necH2TaxF6r5MSZkaYB7Z8fBpy9Qq7DoRjnadhGvqlX+YCwrnPcUDtL3+oXtceH6939vzHvjTCWLypeamfjPUIQ805i+H0EPL+6ZzpGnHpnfu6EOyjEwGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQANCP8/PXbZaPFJwGQCJsXwh/fYrq2fJobfAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="-8, -8, 1936, 1096" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVFhH7ZbZjtowFIZ5pL5gq2HfAmHf9+2FuOlcTMUNKgikSEhlhzP+kzhkgidwRr1rLf1KcoG/z8Y+duB/U7XxeEzIaDSi4XBIg8GA+v0B9fp96vV61O12qdPpULvdoVa7Tc1WixrNJjUaTarXG9TudIxSqfTN7o7fAL9cLnc5u3P25kzX65UmkwnNZjNIfV0CIwfwdDrRETnKHOkgc7Cee/G0cjAlILDZbOjt7RfVGw1D/4oEpl0l4MDx7iNgGAat12v6+fpK1Vrd0HWdJ4H/HAImXCUAuAO+F1itVrRcLmk+n9N0OqVKpWrYXT/XsOAcARt+N/0usFdA07QPyRUKZHf9XMNqNwUcuM/0728CeF+Ikf9eyCzEbKwpl88zBcRWkwI3sAtuAt2BhCWwc2e3F+voTHqOKYB9jq32EC4gjgDe3fD93hHI6jmeAIqMJYAZuIHNCJnbqOXTC7cEtrZAJqvzBFDhUFzUYHxLuC0ggKrRSwEtm+UJoLyaM+ABmwHM+VbBLQHApUA6k+EJoLZjBu7AiAT7wOXoHQGNKYCDBXvagbhFGHApkEprTAFxqn2cARvqCxfxwC2BEyVTaZ4AjlRnBjxQJVgxchlU00QqxROo1euWgOjcH4x8Dt9ud6ZAPMkUqNZqdBICaqA7/vA/tkAskeQJVKrVBwIW+BHcEYgneALlildAwGQE4FMw4oJLgWgszhQoV8ztI2EPoXbcYLdAJBbjCZTKZVNABVFGAZaBQDjKFCiWSs8JKIDeQCAUifIECkU/gd1TYBkIBMMRnkC+UDQrmIRxgN6YAqEwTwB3OPxQ1SE36OeFLSDucPjh38qPYIgngDscrlG4yeAygfMcRypONRwsqO0or6hwKDLY59hqWO1YcPjPMe0YOeDfX4I8gX+oBQLvEwJiQgPuVJwAAAAASUVORK5CYII=" InformativeScreenshot="4746f391ab6bd8af6cbea5d074cdb5aa.png" Selector="&lt;html app='msedge.exe' title='DummyStore'/&gt;" Url="https://210927-reston-uipath.github.io/Keele_F-P1/" />
+                            </uix:NApplicationCard.TargetApp>
+                          </uix:NApplicationCard>
+                        </Sequence>
+                        <uix:NApplicationCard x:Key="Bacon" AttachMode="ByInstance" DisplayName="Use Browser Edge: DummyStore" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" Version="V1">
+                          <uix:NApplicationCard.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,526" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[quantityinSL]">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable Accuracy="0.78" BrowserURL="https://210927-reston-uipath.github.io/Keele_F-P1/" DesignTimeRectangle="979, 352, 164, 30" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl parentid='Bacon' tag='INPUT' type='number' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='Bacon' tag='INPUT' type='number' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKgAAAAiCAYAAADLYJIKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACJSURBVHhe7dIhDoAwAARBXt3vl2BIS/BdMZOcOrvXhDCBkrYFOsYwO77VG+j3gFPWFgVKjkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpv4E+nsPs9FZboFAjUMLmvAEP04m3OZ+q6AAAAABJRU5ErkJggg==" InformativeScreenshot="0644207ed2996ee34c2fa9df92f5d3d7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='DummyStore' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="320, 344, 93, 167" ElementType="Text" FriendlyName="'Bacon'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Bacon' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Bacon' tag='TD' type='' aaname='Bacon' check:text='Bacon' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAACrCAYAAAB2dfJxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALaSURBVHhe7dZNTsJAHEBxr+LChcciLDiJC7gJCUeBcAMWLDDRQ4xp+x+YaesHKuER3ktmwVhpnF9n6kOyq3dE2O0PjisNdwIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiAzkB4T8vpc3p8GhnzbVxjv+kXCIu0iZm29aKFmKzeY8LO7e8IaZtemt0wXaW3mLHzugzC6ypN8lEVY7BTYgfl8bKO+bb+0VffczPPc3HvkWtuqT8jvK1m7SIcFzEAykXtFq2Y6x9h7edZWr42H+I+Bepp0cvPszSZxlxGv9Hd+C8v5vopHqla9DHMeKKbF3xcW31nLHJGG6B+8oDcSv/2Yq7/QyqPidPoFrFY8JHyU97tilx95A2vuXeE43wsSkYpr6t2wtcI3fH2CUL8jgjfIIw9yfm9UR1H1fldLPKPjyMRTuUnPxa1XvCmWOBirv8yr5/+4X26Re9/vmuEsVH/8d0iFT/rPclNGaIb9c4Z3mvs++8SwS6VCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAKgI8Juf3BcabgTAIlw9VL6AH9kboK9T2dVAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Buy'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://210927-reston-uipath.github.io/Keele_F-P1/" DesignTimeRectangle="1208, 352, 51, 38" ElementType="Button" FriendlyName="'Buy'" FullSelectorArgument="&lt;webctrl parentid='Bacon' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='Bacon' tag='INPUT' type='button' aaname='Buy' check:text='Buy' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAqCAYAAAAXk8MDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF7SURBVGhD7Zk9jsIwEIW5AA232sustC3H2BtwAc5ASbctotyKkoqOzPISP2dsZUUSYsgYf9KTyORH/uKJiZSFZMz7yP38inx8V7L6usry004wXowb49d4OeywJhUH49eCXg7mXSdYCzyIl7M+aww8iJfrOtBqSJGzFlLkrIUUOWshRc5aSJH7P5XsLu4CMafXvauSyeQ2ur5vaufjawRJGrlb/YDipZJ1UH9OyHPktpWcsa1adX1EQeSwb3+HM91ce8zskyRyeuB17Y5c50y7c3Zbtz0gJNmC4sWQu3JX2ZyabcrU2yPbmiRdULxMD7lwEWpmMrhBA0KSPXOs1zPRR05fy4mG1+wfMiO5tlajjh0akrYt/TMTLxjteUHr8SbE9YEhyRYU0CnsYOvFElxYxrYkQh6Umz6Qe/TNhsxLzrXlmP82HTITuba9p3gfJbNryylCipy1kCJnLeQ95LL+hJX1x8esPxsD7IC5NUmMF+PWYiCQy42M5UT+ABoQSUS1ikFnAAAAAElFTkSuQmCC" InformativeScreenshot="dda70874b4682e2987ded7f0200b4f3f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='DummyStore' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="320, 344, 93, 167" ElementType="Text" FriendlyName="'Bacon'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Bacon' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Bacon' tag='TD' type='' aaname='Bacon' check:text='Bacon' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAACrCAYAAAB2dfJxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALaSURBVHhe7dZNTsJAHEBxr+LChcciLDiJC7gJCUeBcAMWLDDRQ4xp+x+YaesHKuER3ktmwVhpnF9n6kOyq3dE2O0PjisNdwIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiAzkB4T8vpc3p8GhnzbVxjv+kXCIu0iZm29aKFmKzeY8LO7e8IaZtemt0wXaW3mLHzugzC6ypN8lEVY7BTYgfl8bKO+bb+0VffczPPc3HvkWtuqT8jvK1m7SIcFzEAykXtFq2Y6x9h7edZWr42H+I+Bepp0cvPszSZxlxGv9Hd+C8v5vopHqla9DHMeKKbF3xcW31nLHJGG6B+8oDcSv/2Yq7/QyqPidPoFrFY8JHyU97tilx95A2vuXeE43wsSkYpr6t2wtcI3fH2CUL8jgjfIIw9yfm9UR1H1fldLPKPjyMRTuUnPxa1XvCmWOBirv8yr5/+4X26Re9/vmuEsVH/8d0iFT/rPclNGaIb9c4Z3mvs++8SwS6VCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAKgI8Juf3BcabgTAIlw9VL6AH9kboK9T2dVAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </ActivityAction>
+                          </uix:NApplicationCard.Body>
+                          <uix:NApplicationCard.TargetApp>
+                            <uix:TargetApp Area="-8, -8, 1936, 1096" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVFhH7ZbZjtowFIZ5pL5gq2HfAmHf9+2FuOlcTMUNKgikSEhlhzP+kzhkgidwRr1rLf1KcoG/z8Y+duB/U7XxeEzIaDSi4XBIg8GA+v0B9fp96vV61O12qdPpULvdoVa7Tc1WixrNJjUaTarXG9TudIxSqfTN7o7fAL9cLnc5u3P25kzX65UmkwnNZjNIfV0CIwfwdDrRETnKHOkgc7Cee/G0cjAlILDZbOjt7RfVGw1D/4oEpl0l4MDx7iNgGAat12v6+fpK1Vrd0HWdJ4H/HAImXCUAuAO+F1itVrRcLmk+n9N0OqVKpWrYXT/XsOAcARt+N/0usFdA07QPyRUKZHf9XMNqNwUcuM/0728CeF+Ikf9eyCzEbKwpl88zBcRWkwI3sAtuAt2BhCWwc2e3F+voTHqOKYB9jq32EC4gjgDe3fD93hHI6jmeAIqMJYAZuIHNCJnbqOXTC7cEtrZAJqvzBFDhUFzUYHxLuC0ggKrRSwEtm+UJoLyaM+ABmwHM+VbBLQHApUA6k+EJoLZjBu7AiAT7wOXoHQGNKYCDBXvagbhFGHApkEprTAFxqn2cARvqCxfxwC2BEyVTaZ4AjlRnBjxQJVgxchlU00QqxROo1euWgOjcH4x8Dt9ud6ZAPMkUqNZqdBICaqA7/vA/tkAskeQJVKrVBwIW+BHcEYgneALlildAwGQE4FMw4oJLgWgszhQoV8ztI2EPoXbcYLdAJBbjCZTKZVNABVFGAZaBQDjKFCiWSs8JKIDeQCAUifIECkU/gd1TYBkIBMMRnkC+UDQrmIRxgN6YAqEwTwB3OPxQ1SE36OeFLSDucPjh38qPYIgngDscrlG4yeAygfMcRypONRwsqO0or6hwKDLY59hqWO1YcPjPMe0YOeDfX4I8gX+oBQLvEwJiQgPuVJwAAAAASUVORK5CYII=" InformativeScreenshot="4746f391ab6bd8af6cbea5d074cdb5aa.png" Selector="&lt;html app='msedge.exe' title='DummyStore'/&gt;" Url="https://210927-reston-uipath.github.io/Keele_F-P1/" />
+                          </uix:NApplicationCard.TargetApp>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NApplicationCard>
+                        <uix:NApplicationCard x:Key="Beef" AttachMode="ByInstance" DisplayName="Use Browser Edge: DummyStore" sap:VirtualizedContainerService.HintSize="434,742" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" Version="V1">
+                          <uix:NApplicationCard.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,526" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[quantityinSL]">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://210927-reston-uipath.github.io/Keele_F-P1/" DesignTimeRectangle="979, 519, 164, 30" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl parentid='Beef' tag='INPUT' type='number' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='Beef' tag='INPUT' type='number' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKgAAAAiCAYAAADLYJIKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACJSURBVHhe7dIhDoAwAARBXt3vl2BIS/BdMZOcOrvXhDCBkrYFOsYwO77VG+j3gFPWFgVKjkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpv4E+nsPs9FZboFAjUMLmvAEP04m3OZ+q6AAAAABJRU5ErkJggg==" InformativeScreenshot="c31c51b0667541b99598de712297d0a7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='DummyStore' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="320, 511, 93, 167" ElementType="Text" FriendlyName="'Beef'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Beef' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Beef' tag='TD' type='' aaname='Beef' check:text='Beef' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAACrCAYAAAB2dfJxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKpSURBVHhe7dZNTttAAIDRXqWLLnosxIKTsICbIOUoIG7AggVIcAhXEMcYN6Z/0HxC70kjJZPYi/kyE38ZOLgpws3tnXGgYScEiBAgQoAIASIEiBAgQoAIASIEiBAgQoAIASIEiBAgQsAfRHgcLo6/D1+/7Rln1+N33tHl+XT/08tx7pP6iwjnw9U482xcrKPN4zjxHq6H06cAx5vhYZz5zP49wkcs2P1mOHq650fssKAPirA8upbXDMPV2fzzk+HifvxgdgzthuNosj/Cw+ZksVDj92ZRtgv+ct3y/fYesxB2wprlr/tlvPqljr/kV3Pjoj7/b8xfT8bdtFt0EdasHEe742NcsN3O2DuevrPnuJnGbveIsGYlwjS/PU62R83saFn4+fjaQ4Q1vxfhrePoee6N42iaE2HNL46j6Y94+bQ0Xrd8P7vP8o9ahFW7xds31nbHOGZPSjuvH1EX14vA/yZCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgSIECBCgAgBIgRMEW5u74wDDTshQISDG4YfX+O7RacBGXAAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Buy'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://210927-reston-uipath.github.io/Keele_F-P1/" DesignTimeRectangle="1208, 519, 51, 38" ElementType="Button" FriendlyName="'Buy'" FullSelectorArgument="&lt;webctrl parentid='Beef' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='Beef' tag='INPUT' type='button' aaname='Buy' check:text='Buy' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAqCAYAAAAXk8MDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVGhD7ZmxbsIwEIaZy9DH6itUouI9WPskLLwHYmylDh0CU0ckpjA0AxLS1f8ldhwnFQ7EKGf8S7+EL7Z1X+5wImVCEetx4L5+funlfUfPs096ev0QY+SLvJG/LQOHC5g0ffum6TxT3gqyylfljfxtQAMH8hKsa7EQq/zBoWXguGriKuY6Yw4tA4fe7V4gy+DQSnCSnOCkOsFJdYKT6gTn5wOti2oDV/u8Y354B4A70dKOb0685zE7WHPv4/Bw85z43bwoaNGIh/f94VYFHTG2WnWRnRGh3ab+3ax0uXff6geHsxPn2AW4zkrzmjOtV9XY0wHg2jJg8EW4LS33GNUwPL6irYNXTh8oBsYDrnkIlZVs3CBPh4cz8aoSPnD2Xgzq7unnkcLVMZY1t4/Dw+m2NP8Z98DI1bo2nLkJbryHA8B16R9glm69NkR5sFzXkvCAcMMbcLe82YwXjtuy/7PN9gjh6va+9X10vJUbwAlOqhOcVD8eXNSfsKL++Bj1Z2MIF0COSehdKUa+yNsGgxpwsSliOKI/KCeyzne1PYcAAAAASUVORK5CYII=" InformativeScreenshot="4877a9a9597e996afdfff047cb38c960.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='DummyStore' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="320, 511, 93, 167" ElementType="Text" FriendlyName="'Beef'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Beef' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Beef' tag='TD' type='' aaname='Beef' check:text='Beef' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAACrCAYAAAB2dfJxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR8SURBVHhe7ddLSyNZGIfx+iqzmMV8JEURaaFVFEFBEDe6aMEGV7p0rTQI4k5w5cKNdNsLF4ILzc2Ye4x4v71DlSfpmIk1DrRz/pjnBwd8yySLeqpOJYG9wdPTE+sdVyPCUSrL8rTedCfgfRFBABEERBHChwP8CepPaPhDBAFRhMfHRzfChyAMQAS/oggPDw9uhA9BGOD+/t6N8CEIA9zd3bkRPgRhgNvbWzfChyAMcH197Ub4ENzc3NjV1ZUb4UMQ3gUXFxduhA/B5eWlnZ+fuzFO0b59+sv++LPNmv/pXvMbff/a+Pwv392xDyoI74KzszM3xqlH+Go/3JGIO1n9a0V34Hf4aV/CAJ/WrOCOfGRBeBdUKhU3xnklwnucsNM16w8/8z3uMEFBrVazUqnkxjj/JULr1tX6HrMf883//2zfTt0/mrah+vrw21G1WrVC4S3XcPsIhbXPLSfKva4pyvMJ//W+1vn5M5pCdNqdEG5F+XzejXFar+5f68WV6q7kF8fcSY2eG81/N7i7qX7SOy1CuVy209P6JRjnle2ovn24E1a/M9qu8DVttpvGqt89nRYhfB5ks1k3xnklQuP483byvNU0bS0t/rl9tdFpEYrFomUyGTfGeVuEuO0oOhazHTWOdVqE8KGcTqfdGOdftqPGg7j125J7X+vc9DmtD+qOixA+lFOplBvj1E9eu/Xa3eFW0zelupdfUVveTwT834JcLmfJZNKN8CGKkEgk3AgfgvA3AhH8IoIAIgiIIhwfH7sRPhBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEEEEEAEQQQQQARBBBBABEERBESiYQb4QMRBBBBQJDL5YjgWRQhmUy6ET4E+XzeUqmUG+EDEQQEhULB0um0G+FDUCwWLZPJuBE+BKVSybLZrBvhQ1Auly38rQB/gkqlYuHD+SiVZXlaQbVatfDhfHJyYkdHR3ZwcGB7e3u2s7NjW1tbtrGxYaurq7a8vGyLi4s2Pz9vs7OzNjU1ZRMTEzY6OmqDg4M2MDBg/f391tfXZ729vdbT02Pd3d3R6urqYsWsoFarWfhcCLek8Efb4eGh7e/v2+7urm1vb9vm5qatr6/byspKFGJpackWFhZsbm7OZmZmbHp62iYnJ218fNzGxsaiKCMjIzY8PGxDQ0PRCiOxXluD9jfPghJ0EnSlswAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </ActivityAction>
+                          </uix:NApplicationCard.Body>
+                          <uix:NApplicationCard.TargetApp>
+                            <uix:TargetApp Area="-8, -8, 1936, 1096" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVFhH7ZbZjtowFIZ5pL5gq2HfAmHf9+2FuOlcTMUNKgikSEhlhzP+kzhkgidwRr1rLf1KcoG/z8Y+duB/U7XxeEzIaDSi4XBIg8GA+v0B9fp96vV61O12qdPpULvdoVa7Tc1WixrNJjUaTarXG9TudIxSqfTN7o7fAL9cLnc5u3P25kzX65UmkwnNZjNIfV0CIwfwdDrRETnKHOkgc7Cee/G0cjAlILDZbOjt7RfVGw1D/4oEpl0l4MDx7iNgGAat12v6+fpK1Vrd0HWdJ4H/HAImXCUAuAO+F1itVrRcLmk+n9N0OqVKpWrYXT/XsOAcARt+N/0usFdA07QPyRUKZHf9XMNqNwUcuM/0728CeF+Ikf9eyCzEbKwpl88zBcRWkwI3sAtuAt2BhCWwc2e3F+voTHqOKYB9jq32EC4gjgDe3fD93hHI6jmeAIqMJYAZuIHNCJnbqOXTC7cEtrZAJqvzBFDhUFzUYHxLuC0ggKrRSwEtm+UJoLyaM+ABmwHM+VbBLQHApUA6k+EJoLZjBu7AiAT7wOXoHQGNKYCDBXvagbhFGHApkEprTAFxqn2cARvqCxfxwC2BEyVTaZ4AjlRnBjxQJVgxchlU00QqxROo1euWgOjcH4x8Dt9ud6ZAPMkUqNZqdBICaqA7/vA/tkAskeQJVKrVBwIW+BHcEYgneALlildAwGQE4FMw4oJLgWgszhQoV8ztI2EPoXbcYLdAJBbjCZTKZVNABVFGAZaBQDjKFCiWSs8JKIDeQCAUifIECkU/gd1TYBkIBMMRnkC+UDQrmIRxgN6YAqEwTwB3OPxQ1SE36OeFLSDucPjh38qPYIgngDscrlG4yeAygfMcRypONRwsqO0or6hwKDLY59hqWO1YcPjPMe0YOeDfX4I8gX+oBQLvEwJiQgPuVJwAAAAASUVORK5CYII=" InformativeScreenshot="4746f391ab6bd8af6cbea5d074cdb5aa.png" Selector="&lt;html app='msedge.exe' title='DummyStore'/&gt;" Url="https://210927-reston-uipath.github.io/Keele_F-P1/" />
+                          </uix:NApplicationCard.TargetApp>
+                        </uix:NApplicationCard>
+                        <uix:NApplicationCard x:Key="Apples" AttachMode="ByInstance" DisplayName="Use Browser Edge: DummyStore" sap:VirtualizedContainerService.HintSize="434,742" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="Simulate" Version="V1">
+                          <uix:NApplicationCard.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,526" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="[quantityinSL]">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://210927-reston-uipath.github.io/Keele_F-P1/" DesignTimeRectangle="979, 686, 164, 30" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl parentid='Apples' tag='INPUT' type='number' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='Apples' tag='INPUT' type='number' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKgAAAAiCAYAAADLYJIKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACJSURBVHhe7dIhDoAwAARBXt3vl2BIS/BdMZOcOrvXhDCBkrYFOsYwO77VG+j3gFPWFgVKjkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpv4E+nsPs9FZboFAjUMLmvAEP04m3OZ+q6AAAAABJRU5ErkJggg==" InformativeScreenshot="725bc7dbcf0645fc28f1080c98d03d90.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='DummyStore' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="320, 678, 93, 167" ElementType="Text" FriendlyName="'Apples'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Apples' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Apples' tag='TD' type='' aaname='Apples' check:text='Apples' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAACrCAYAAAB2dfJxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMzSURBVHhe7dZPTuMwGEDxuQqLWcyxEAtO0gXcBClHKeIGLFiABIcIcWIntpuWBJXpC3pPslBK+ofvl7j8ae3ijQjPL6+uCy3vBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQB9C+G9uW2v/v7r1m378BYfPGtP7S68/k3TvsdHfnPfQPhoH24CwLCum4/4+DkT4XRvTXvdDWjXDD9/ZlAinOzxLtwB9+3jeEdUW1JEurp7yrat8o4ZXiM8Lw67X+E1U3MI5R1Ynt+V3jetDQGuRIjD6QYcSkMutqRsGOnxdN5u3x9GhLDSIOuh18cRIBvsdDGEys91eMxuHcL+vhjmNPDsqkyP5VdidneEEsL4Ol3T3RGOKoT6fUPxNXvouc+xoVYhlFdfaNoiDmCKq7AcajnwofJuKc/Pt7WD1b9PPL9aBRq4FQjzf+i40tB/AGHu/LmG8/L19XMILUeY2xJC9VaQjtNW0heHemI7GhDWb0fHrvalcIQWIwx/1NyeW21JI8o0oKNfzCNUNfQvj6sv6og0/YOQPtM2viMWIpRXct24Z4ffZ9tRvj3M/ou6n8DKgdVDD03Y/Sp+1xUhprUNgNCqL+ZFZQjH2tJW8T8SAZAIgM6PYKsTAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABoRnl9eXRda3gmARLh4bfsJrh8dbeJiCZ0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Buy'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://210927-reston-uipath.github.io/Keele_F-P1/" DesignTimeRectangle="1208, 686, 51, 38" ElementType="Button" FriendlyName="'Buy'" FullSelectorArgument="&lt;webctrl parentid='Apples' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='Apples' tag='INPUT' type='button' aaname='Buy' check:text='Buy' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAqCAYAAAAXk8MDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF7SURBVGhD7Zk9jsIwEIW5AA232sustC3H2BtwAc5ASbctotyKkoqOzPISP2dsZUUSYsgYf9KTyORH/uKJiZSFZMz7yP38inx8V7L6usry004wXowb49d4OeywJhUH49eCXg7mXSdYCzyIl7M+aww8iJfrOtBqSJGzFlLkrIUUOWshRc5aSJH7P5XsLu4CMafXvauSyeQ2ur5vaufjawRJGrlb/YDipZJ1UH9OyHPktpWcsa1adX1EQeSwb3+HM91ce8zskyRyeuB17Y5c50y7c3Zbtz0gJNmC4sWQu3JX2ZyabcrU2yPbmiRdULxMD7lwEWpmMrhBA0KSPXOs1zPRR05fy4mG1+wfMiO5tlajjh0akrYt/TMTLxjteUHr8SbE9YEhyRYU0CnsYOvFElxYxrYkQh6Umz6Qe/TNhsxLzrXlmP82HTITuba9p3gfJbNryylCipy1kCJnLeQ95LL+hJX1x8esPxsD7IC5NUmMF+PWYiCQy42M5UT+ABoQSUS1ikFnAAAAAElFTkSuQmCC" InformativeScreenshot="0343815b4f53976259ba4f6e9335909f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='DummyStore' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="320, 678, 93, 167" ElementType="Text" FriendlyName="'Apples'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Apples' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Apples' tag='TD' type='' aaname='Apples' check:text='Apples' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAACrCAYAAAB2dfJxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMzSURBVHhe7dZPTuMwGEDxuQqLWcyxEAtO0gXcBClHKeIGLFiABIcIcWIntpuWBJXpC3pPslBK+ofvl7j8ae3ijQjPL6+uCy3vBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQB9C+G9uW2v/v7r1m378BYfPGtP7S68/k3TvsdHfnPfQPhoH24CwLCum4/4+DkT4XRvTXvdDWjXDD9/ZlAinOzxLtwB9+3jeEdUW1JEurp7yrat8o4ZXiM8Lw67X+E1U3MI5R1Ynt+V3jetDQGuRIjD6QYcSkMutqRsGOnxdN5u3x9GhLDSIOuh18cRIBvsdDGEys91eMxuHcL+vhjmNPDsqkyP5VdidneEEsL4Ol3T3RGOKoT6fUPxNXvouc+xoVYhlFdfaNoiDmCKq7AcajnwofJuKc/Pt7WD1b9PPL9aBRq4FQjzf+i40tB/AGHu/LmG8/L19XMILUeY2xJC9VaQjtNW0heHemI7GhDWb0fHrvalcIQWIwx/1NyeW21JI8o0oKNfzCNUNfQvj6sv6og0/YOQPtM2viMWIpRXct24Z4ffZ9tRvj3M/ou6n8DKgdVDD03Y/Sp+1xUhprUNgNCqL+ZFZQjH2tJW8T8SAZAIgM6PYKsTAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABoRnl9eXRda3gmARLh4bfsJrh8dbeJiCZ0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </ActivityAction>
+                          </uix:NApplicationCard.Body>
+                          <uix:NApplicationCard.TargetApp>
+                            <uix:TargetApp Area="-8, -8, 1936, 1096" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVFhH7ZbZjtowFIZ5pL5gq2HfAmHf9+2FuOlcTMUNKgikSEhlhzP+kzhkgidwRr1rLf1KcoG/z8Y+duB/U7XxeEzIaDSi4XBIg8GA+v0B9fp96vV61O12qdPpULvdoVa7Tc1WixrNJjUaTarXG9TudIxSqfTN7o7fAL9cLnc5u3P25kzX65UmkwnNZjNIfV0CIwfwdDrRETnKHOkgc7Cee/G0cjAlILDZbOjt7RfVGw1D/4oEpl0l4MDx7iNgGAat12v6+fpK1Vrd0HWdJ4H/HAImXCUAuAO+F1itVrRcLmk+n9N0OqVKpWrYXT/XsOAcARt+N/0usFdA07QPyRUKZHf9XMNqNwUcuM/0728CeF+Ikf9eyCzEbKwpl88zBcRWkwI3sAtuAt2BhCWwc2e3F+voTHqOKYB9jq32EC4gjgDe3fD93hHI6jmeAIqMJYAZuIHNCJnbqOXTC7cEtrZAJqvzBFDhUFzUYHxLuC0ggKrRSwEtm+UJoLyaM+ABmwHM+VbBLQHApUA6k+EJoLZjBu7AiAT7wOXoHQGNKYCDBXvagbhFGHApkEprTAFxqn2cARvqCxfxwC2BEyVTaZ4AjlRnBjxQJVgxchlU00QqxROo1euWgOjcH4x8Dt9ud6ZAPMkUqNZqdBICaqA7/vA/tkAskeQJVKrVBwIW+BHcEYgneALlildAwGQE4FMw4oJLgWgszhQoV8ztI2EPoXbcYLdAJBbjCZTKZVNABVFGAZaBQDjKFCiWSs8JKIDeQCAUifIECkU/gd1TYBkIBMMRnkC+UDQrmIRxgN6YAqEwTwB3OPxQ1SE36OeFLSDucPjh38qPYIgngDscrlG4yeAygfMcRypONRwsqO0or6hwKDLY59hqWO1YcPjPMe0YOeDfX4I8gX+oBQLvEwJiQgPuVJwAAAAASUVORK5CYII=" InformativeScreenshot="4746f391ab6bd8af6cbea5d074cdb5aa.png" Selector="&lt;html app='msedge.exe' title='DummyStore'/&gt;" Url="https://210927-reston-uipath.github.io/Keele_F-P1/" />
+                          </uix:NApplicationCard.TargetApp>
+                        </uix:NApplicationCard>
+                        <uix:NApplicationCard x:Key="Oranges" AttachMode="ByInstance" DisplayName="Use Browser Edge: DummyStore" sap:VirtualizedContainerService.HintSize="452,836" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="Simulate" Version="V1">
+                          <uix:NApplicationCard.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                              </ActivityAction.Argument>
+                              <Sequence sap:VirtualizedContainerService.HintSize="418,620" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,526" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_5" Text="[quantityinSL]">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://210927-reston-uipath.github.io/Keele_F-P1/" DesignTimeRectangle="979, 853, 164, 30" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl parentid='Oranges' tag='INPUT' type='number' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='Oranges' tag='INPUT' type='number' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKgAAAAiCAYAAADLYJIKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACJSURBVHhe7dIhDoAwAARBXt3vl2BIS/BdMZOcOrvXhDCBkrYFOsYwO77VG+j3gFPWFgVKjkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpAiVNoKQJlDSBkiZQ0gRKmkBJEyhpv4E+nsPs9FZboFAjUMLmvAEP04m3OZ+q6AAAAABJRU5ErkJggg==" InformativeScreenshot="5ad34e03d0f7c6e6c7b5b2d54c3ba072.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='DummyStore' /&gt;" SearchSteps="FuzzySelector, Image">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="320, 845, 93, 167" ElementType="Text" FriendlyName="'Oranges'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Oranges' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Oranges' tag='TD' type='' aaname='Oranges' check:text='Oranges' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAACrCAYAAAB2dfJxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANiSURBVHhe7dZBTuMwAEDRucosZsGxqi44SRdwE6QeBcQNWLAACQ6RaWo7cWxXNB21+Rn9L3nRNAmNX5zwq7PFGxDe3j8cCw1XAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIAuQPjunrZ33e8/49g9x6/somYivHa7fuK3++4rbvna3x8hNvvvuMXmNgvh5aG/8++7p8+44VhaGY/dS9xy28aVudYVeT7C577bFKsgFXDG1RA+9yhh5aTtadWMYwpaHhf2KXHz7+J4eI3fxZ4fJ99PV2l5/FI3z9j5COnCygs+NExu/C5N5i7DCfvkF5wmY9yWVtpmG7dV8PWqS397WAXxdw6f4zkCRDy+PF/jxrplV0T4+eLSpKfVkI4bHyvlpEe4/Lzxd7UnOZRuinGFlY/UZbsqQvWMTueYjBIhn6ASofxcroTGo2oY/XnT8dMxfVzdviu+E6Z3W9onRyz3+xnhUPod2SgfPa0bJW+4aVrnWKDzEQ61Jrc1UfV+jcfIcNwMhDjJpycs7t96HDVunr7qnbJAsxBaqyFM3PQiTk9mtm14NM1HSHdvPtIqrCY1/p3j58ZKqf/m7ZuHcKx87tYX0L6w4rjDRIQJm4EwfG6N7Lji3TO5yyvI+vffugsQliugZe+HGOGR8i+tEKH+byasoBpnLa0KoS9MeDFOvHTX0uoQ/sdEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgEQAJAIgEQCJAEgEQCIAEgGQCIBEACQCIBEAiQBIBEAiABIBkAiARAAkAiARAIkASARAIgASAZAIgAaEt/cPx0LDlQBIhMXrur88j8WdA+BLVwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Buy'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://210927-reston-uipath.github.io/Keele_F-P1/" DesignTimeRectangle="1208, 853, 51, 38" ElementType="Button" FriendlyName="'Buy'" FullSelectorArgument="&lt;webctrl parentid='Oranges' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='Oranges' tag='INPUT' type='button' aaname='Buy' check:text='Buy' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAqCAYAAAAXk8MDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVGhD7ZmxbsIwEIaZy9DH6itUouI9WPskLLwHYmylDh0CU0ckpjA0AxLS1f8ldhwnFQ7EKGf8S7+EL7Z1X+5wImVCEetx4L5+funlfUfPs096ev0QY+SLvJG/LQOHC5g0ffum6TxT3gqyylfljfxtQAMH8hKsa7EQq/zBoWXguGriKuY6Yw4tA4fe7V4gy+DQSnCSnOCkOsFJdYKT6gTn5wOti2oDV/u8Y354B4A70dKOb0685zE7WHPv4/Bw85z43bwoaNGIh/f94VYFHTG2WnWRnRGh3ab+3ax0uXff6geHsxPn2AW4zkrzmjOtV9XY0wHg2jJg8EW4LS33GNUwPL6irYNXTh8oBsYDrnkIlZVs3CBPh4cz8aoSPnD2Xgzq7unnkcLVMZY1t4/Dw+m2NP8Z98DI1bo2nLkJbryHA8B16R9glm69NkR5sFzXkvCAcMMbcLe82YwXjtuy/7PN9gjh6va+9X10vJUbwAlOqhOcVD8eXNSfsKL++Bj1Z2MIF0COSehdKUa+yNsGgxpwsSliOKI/KCeyzne1PYcAAAAASUVORK5CYII=" InformativeScreenshot="5e337628379a0e8521ba7f16a84e9188.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='DummyStore' /&gt;" SearchSteps="FuzzySelector, Image">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="320, 845, 93, 167" ElementType="Text" FriendlyName="'Oranges'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Oranges' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='Oranges' tag='TD' type='' aaname='Oranges' check:text='Oranges' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAACrCAYAAAB2dfJxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUwSURBVHhe7ddLSyNLGMbx+ipncRbnIymKBIVRUQQFQdzoQsEBV7p0rQwI4k5w5cKNzDgLF4ILzc2Ye4x4v73H6n47l04bjYexHg/PD2pRnXRM6t/VPWPkHZ6fnzn+4KhFOE5mOByNd+0E+rMYAQAjAPAi2IcDuWOCJzS5wwgAvAhPT086JReMDcAIbnkRHh8fdUouGBvg4eFBp+SCsQHu7+91Si4YG+Du7k6n5IKxAW5ubnRKLpjb21u5vr7WKblg7C64vLzUKblgrq6u5OLiQqfvUZAf/f/IX3/Xx9xPfYk+xNhdcH5+rtO3/JY5u/D965LXI/n1b16I2HpBj1CnjN0F5XJZp+39WrBX/jf5caYHPMHO+C6/9Mjnqu/Mr7ojTbValWKxqNM2ztYlFtoFAT9OfTf4cxvF3znB8WDX1Edz0PB5/nvCcRtf07HwW19TP783vd68S8Pnu7p46kylUpF8PrysEYIfFv7BL2qLq68FiznXEMd/T+MPDhajfizYabF+PdYSvnXXBX+7tgv0e9bm+hl+CD0//HkRF9ZnMvZWlMvldNpGxxHe/nHBoge7ITivflsJL7qGa/xc/V7Ri+wLLor6DgvfUt0ypVJJzs7e8Y0+EKHlHh18RtMIR2hcoHCE8Dy8EyJuVbVhPzc4v3k0364+n7HPg0wmo9M2On4mNF9twXsaI4bf93aEF8H3aBjhW0/UhdKodtFEfYYDplAoSDqd1ml7UYsbtVCt74u4jdTO6yCCLvLrC6bvj7odRVw8VsszxQFjH8qpVEqnb4jYDf7CNf+I1xez4Vjt1tR5hODqbRzBLmxZVP073jxip7T+zc9n7EM5mUzq9D3C993WHxD9w0LnvSyEv2AdRKjNo0bDeaFnT9NV3hKy9ft/tg9EcMeP1vB8UAi3lP/CZLNZSSQSOsUWLHb4XzP+DmqN81V4EeLxuE7x+QseGq88dL8KY/+P8JUi/B8xAgBGAOBFODk50Sm5wAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAEAIwBgBACMAIARADACAEYAwAgAGAGAFyEej+uUXGAEAIwAwGSzWUZwzIuQSCR0Si6YXC4nyWRSp+QCIwAw+XxeUqmUTskFUygUJJ1O65RcMMViUTKZjE7JBVMqlcT+X4HcMeVyWezD+TiZ4XA0TKVSEftwPj09lePjYzk8PJT9/X3Z3d2V7e1t2dzclLW1NVlZWZGlpSVZWFiQ2dlZmZqakomJCRkdHZXBwUEZGBiQWCwmfX190tvbKz09PdLd3e2Nrq4ujjbDVKtVsc8Fe0uy/2k7OjqSg4MD2dvbk52dHdna2pKNjQ1ZXV31QiwvL8vi4qLMz8/LzMyMTE9Py+TkpIyPj8vY2JgXZWRkRIaHh2VoaMgbNhLHa2NQ/gWsLhzM/ELLJQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </Sequence>
+                            </ActivityAction>
+                          </uix:NApplicationCard.Body>
+                          <uix:NApplicationCard.TargetApp>
+                            <uix:TargetApp Area="-8, -8, 1936, 1096" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVFhH7ZbZjtowFIZ5pL5gq2HfAmHf9+2FuOlcTMUNKgikSEhlhzP+kzhkgidwRr1rLf1KcoG/z8Y+duB/U7XxeEzIaDSi4XBIg8GA+v0B9fp96vV61O12qdPpULvdoVa7Tc1WixrNJjUaTarXG9TudIxSqfTN7o7fAL9cLnc5u3P25kzX65UmkwnNZjNIfV0CIwfwdDrRETnKHOkgc7Cee/G0cjAlILDZbOjt7RfVGw1D/4oEpl0l4MDx7iNgGAat12v6+fpK1Vrd0HWdJ4H/HAImXCUAuAO+F1itVrRcLmk+n9N0OqVKpWrYXT/XsOAcARt+N/0usFdA07QPyRUKZHf9XMNqNwUcuM/0728CeF+Ikf9eyCzEbKwpl88zBcRWkwI3sAtuAt2BhCWwc2e3F+voTHqOKYB9jq32EC4gjgDe3fD93hHI6jmeAIqMJYAZuIHNCJnbqOXTC7cEtrZAJqvzBFDhUFzUYHxLuC0ggKrRSwEtm+UJoLyaM+ABmwHM+VbBLQHApUA6k+EJoLZjBu7AiAT7wOXoHQGNKYCDBXvagbhFGHApkEprTAFxqn2cARvqCxfxwC2BEyVTaZ4AjlRnBjxQJVgxchlU00QqxROo1euWgOjcH4x8Dt9ud6ZAPMkUqNZqdBICaqA7/vA/tkAskeQJVKrVBwIW+BHcEYgneALlildAwGQE4FMw4oJLgWgszhQoV8ztI2EPoXbcYLdAJBbjCZTKZVNABVFGAZaBQDjKFCiWSs8JKIDeQCAUifIECkU/gd1TYBkIBMMRnkC+UDQrmIRxgN6YAqEwTwB3OPxQ1SE36OeFLSDucPjh38qPYIgngDscrlG4yeAygfMcRypONRwsqO0or6hwKDLY59hqWO1YcPjPMe0YOeDfX4I8gX+oBQLvEwJiQgPuVJwAAAAASUVORK5CYII=" InformativeScreenshot="4746f391ab6bd8af6cbea5d074cdb5aa.png" Selector="&lt;html app='msedge.exe' title='DummyStore'/&gt;" Url="https://210927-reston-uipath.github.io/Keele_F-P1/" />
+                          </uix:NApplicationCard.TargetApp>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NApplicationCard>
+                      </Switch>
+                    </Sequence>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'P  total'" sap:VirtualizedContainerService.HintSize="380,106" sap2010:WorkflowViewState.IdRef="GetFullText_1">
+              <ui:GetFullText.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f5defa00-d4fe-4bfb-80e2-e0efd9b100e0" InformativeScreenshot="df73228a5f41ee588114c3bf7eb805b1" Selector="&lt;webctrl tag='P' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetFullText.Target>
+              <ui:GetFullText.Text>
+                <OutArgument x:TypeArguments="x:String">[total]</OutArgument>
+              </ui:GetFullText.Text>
+            </ui:GetFullText>
+            <Assign sap:VirtualizedContainerService.HintSize="380,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[total]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[total.Replace("$", "")]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_44">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'DummyStore Page'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="BrowserScope_7" InformativeScreenshot="81cdc770c66b8cda6d7eef1256df475d" Selector="&lt;html app='msedge.exe' title='DummyStore' /&gt;">
+        <ui:BrowserScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_43">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'TABLE  cart'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_7" MaxNumberOfResults="100" SimulateClick="True">
+                <ui:ExtractData.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4f811b6e-8fab-4015-a04f-984b95c87791" InformativeScreenshot="a0f5e9d391cb3fa662b54a54bc893a84" Selector="&lt;webctrl id='cart' tag='TABLE' /&gt;" WaitForReady="COMPLETE">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                  </ui:Target>
+                </ui:ExtractData.Target>
+              </ui:ExtractData>
+            </Sequence>
+          </ActivityAction>
+        </ui:BrowserScope.Body>
+      </ui:BrowserScope>
     </Sequence>
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe  DummyStore'" sap:VirtualizedContainerService.HintSize="476,764" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="29bdb2423064af1ca760a783d0dbb70c" Selector="&lt;html app='msedge.exe' title='DummyStore' /&gt;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,618" sap2010:WorkflowViewState.IdRef="Sequence_36">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="568f73c0-58e9-4afb-8bbd-929a7fb763db" InformativeScreenshot="6363f2b8d73b38578cb47f91da84cbe3" Selector="&lt;webctrl tag='BUTTON' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  OK'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="49a73368-8014-4135-9840-6e2093d6150e" InformativeScreenshot="6f58bcfce95c4b3005311a5984558cf8" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='DummyStore - Personal - Microsoft​ Edge' /&gt;&lt;ctrl name='210927-reston-uipath.github.io says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" ProviderName="System.Data.Odbc" Sql="[&quot;insert into orderInfo (clientID, total) values ( &quot;+clientID+&quot; , &quot; +total+ &quot; ) &quot;]" ConnectionString="Dsn=P1Database;uid=otinzwbv;pwd=bTqimzgee19EmJO8aDl46lEUiwc0RX1-">
+              <ui:ExecuteNonQuery.Parameters>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:ExecuteNonQuery.Parameters>
+            </ui:ExecuteNonQuery>
+            <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'msedge.exe  DummyStore'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="b7f55d6e4dc4ff8428afc0339c2af0c6" WaitForReady="INTERACTIVE" />
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
+  </Sequence>
 </Activity>
