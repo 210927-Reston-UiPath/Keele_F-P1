@@ -2,13 +2,16 @@ Project - 1 Rosa 2.0
 
 MVPs -
 
-Can bulk order from custom webpage.
+Can bulk order from custom webpage
 
 Can add new clients to clientDB
 
-Can generate new shopping list for new client by matching clientID to what they ordered.
+Records total cost and order and inserts into OrderInfoTable in DB
 
-Can generate individual expense sheet for each client(Will be able to email client expenses and items ordered)
+Generates expenses per item in expensesheetTable in DB by client id
 
-Can shop from 2 vendors
+Can shop from PEGA 
+
+Can Shop from DummyStore
+
 
