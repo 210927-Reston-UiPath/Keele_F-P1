@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1298,6863</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1298,6925</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>OrderFromPega_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
@@ -73,7 +73,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="612,6758" sap2010:WorkflowViewState.IdRef="Sequence_10">
+  <Sequence sap:VirtualizedContainerService.HintSize="612,6820" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="shoppingList" />
       <Variable x:TypeArguments="x:String" Name="total" />
@@ -90,7 +90,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="OrderFromPega" sap:VirtualizedContainerService.HintSize="570,6666" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence DisplayName="OrderFromPega" sap:VirtualizedContainerService.HintSize="570,6728" sap2010:WorkflowViewState.IdRef="Sequence_9">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -612,6 +612,7 @@
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
         </ui:ExecuteNonQuery.Parameters>
       </ui:ExecuteNonQuery>
+      <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="528,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
       <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'msedge.exe Order'" sap:VirtualizedContainerService.HintSize="528,106" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="1084bb8c7e9a1871eb6e039bf6317c53" Selector="&lt;html app='msedge.exe' title='Order Products | Pega Studio Training Web Application' /&gt;" WaitForReady="INTERACTIVE" />
     </Sequence>
   </Sequence>
