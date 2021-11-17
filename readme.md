@@ -1,7 +1,7 @@
 # P1 - ROSA 2.0
 
 ## Project Description -
-This project has an automated Robot that automatically shops for clients in a database based on what vendor they use, PEGA practice website and Dummy store website created by me. It also allows for new users to be added.
+This project has an attended Robot automatically shop for clients in a database based on what vendor they use, PEGA practice website or DummyStore website created by me. It also allows for new users to be added through input dialog boxes.
 
 ## Technologies Used-
 
