@@ -23,6 +23,7 @@ This project has an attended Robot automatically shop for clients in a database 
 * Make much better exception and error handling
 * Scrub the project for unnessasary activities and declutter it
 * clean up the SQL DB
+* Get Email Automation done
 
 
 
