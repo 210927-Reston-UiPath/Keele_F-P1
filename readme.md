@@ -18,9 +18,9 @@ This project has an attended Robot automatically shop for clients in a database 
 * Can shop from PEGA (https://training.openspan.com/login)
 * Can Shop from DummyStore (https://210927-reston-uipath.github.io/Keele_F-P1/)
 
-## To do(If I get back to this Project)-
+## Stretch Goals/To Do
 
-* Make much better exception and error handling
+* Create more robust exception and error handling
 * Scrub the project for unnessasary activities and declutter it
 * clean up the SQL DB
 * Get Email Automation done
